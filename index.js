@@ -16,6 +16,9 @@ app.use(routes)
 app.set('views', path.resolve(__dirname, 'src' , 'views'))
 app.set('view engine', 'ejs')
 
+app.get('/',(req,res)=>{
+    res.sendFile(__dirname + "/html/index.html")
+})
 
 conn.connect(err=>{
 

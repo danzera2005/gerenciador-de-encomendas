@@ -1,14 +1,19 @@
 const express = require('express')
 const route = express.Router()
 
+
 const RouteHome = require('./src/controlls/homecontrolls')
 const routeCadastrar = require('./src/controlls/cadastrarcontrolls')
 const routeUpdate = require('./src/controlls/editcontrolls')
 const routeDelete = require('./src/controlls/deletcontrolls')
 
 
+//rotas inicio
+
+
+
 //rotas home
-route.get('/',RouteHome.inicio)
+route.get('/home',RouteHome.inicio)
 
 
 //rotas cadastrar
