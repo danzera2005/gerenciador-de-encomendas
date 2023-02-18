@@ -24,20 +24,20 @@ app.get('/',(req,res)=>{
 
 app.post('/',(req,res)=>{
     
-    const mysql = "INSERT INTO usuarios(nome_usuario,senha_usuario) VALUES(?)"
+    const mysql = "INSERT INTO usuarios(nome,cpf,telefone,senha) VALUES(?)"
 
     const values =[
         req.body.nome,
-        
-        
-        req.body.senha,
+        req.body.cpf,
+        req.body.tell,
+        req.body.senha
     ];
 
     conn.query(mysql,[values],(err) =>{
-
+        var nome = req.body.nome
         if(err) throw err;
         console.log("usuario cadastrado")
-        res.redirect("back")
+        res.redirect("Home")
     })
     
 

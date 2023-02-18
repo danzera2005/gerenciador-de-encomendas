@@ -23,6 +23,11 @@ header{
     justify-content: center;
 }
 
+.ctt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .encomendas{
 height: 300px;
 width: 200px;
@@ -133,7 +138,7 @@ body{
 }
 
 footer{
-    background-color: black;
+    background-color: cornflowerblue;
     width: auto;
     height: 100px;
 }
@@ -155,6 +160,13 @@ input {
     height: 30px;
     border: 1px solid grey; 
     margin-top: 5px;
+}
+
+.log{
+    
+    width: 90%;
+    height: 50px;
+    margin-left: 10px;
 }
 
 
@@ -193,7 +205,7 @@ legend{
 
 .itens{
     background-color:white;
-    height: 360px;
+    height: 370px;
     width: 200px;
     display: flex;
     justify-content: center;
