@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,49 +34,29 @@
             <h1>Stock center</h1>
         </div>
         <div class="box">
-            <div class="itens-cadastrar">
+            <div class="itens">
                 <div>
-                <form action="/editar" method="post">
+                <form action="" method="post">
                    <fieldset>
                     <!-- <legend>cadastrar</legend> -->
+                    <label for="nome">nome</label>
+                    <input type="text" id="nome" placeholder="digite seu nome completo" name="nome" required><br>
 
-            <label for="id">id</label>
-            <input type="number" placeholder="Digite o id do produto" name="id">
+                    <label for="cep">cep</label>
+                    <input type="text" id="cep" placeholder="digite seu cpf" name="cpf" required><br>
 
-            <label for="nome_produto">nome produto</label>
-            <input type="text" placeholder="Nome produto" name="nome_produto" id="imp" required>
+                    <label for="tell">telefone</label>
+                    <input type="tel" id="tell" placeholder="digite seu telefone" name="tell" required><br>
 
-            <label for="altura">altura</label>
-            <input type="number" placeholder="altura produto" name="altura" id="imp" required>
+                    <label for="senha">senha</label>
+                    <input type="text" id="senha" placeholder="crie sua senha" name="senha" required><br>
 
-            <label for="largura">largura</label>
-            <input type="number" placeholder="largura produto" name="largura" id="imp" required>
+                    
 
-            <label for="peso">peso</label>
-            <input type="number" placeholder="peso produto" name="peso" id="imp" required>
-
-            <label for="entregador">entregador</label>
-            <input type="text" placeholder="Entregadores" name="entregador" id="imp" required>
-
-            <label for="endereco">endereço</label>
-            <input type="text" placeholder="Endereço de entrega" name="endereco" id="imp" required>
-
-            <label for="status">status</label>
-            <input type="text" placeholder="status entrega" name="status" id="imp" required>
-
-                    <button type="submit">Atualizar</button>
+                    <button type="submit">criar minha conta</button>
                    </fieldset>
                     
                 </form>
-
-           
-
-        </div>
-      
-         
-      
-        
-      
                 
             </div>
         </div>

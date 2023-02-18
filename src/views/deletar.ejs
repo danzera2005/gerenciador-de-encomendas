@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,39 +8,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./index.js" defer></script>
 </head>
 <body>
- 
-    <header>
-        <a id="logo" href="/">  <img src="transparent-shipping-box-box-package-delivery-5dbb68d1a10c23.8583468215725631536597.png" alt="" width="40px" height="40px"></a>
-        <a id="titulo">DN </a>
-        <nav>
 
-            
-           
-            <ul class="menu">
-                  <li><a href="/">Home</a></li>
-                  <li><a href="/cadastrar">Cadastrar encomenda</a></li>
-                  <li><a href="/editar">Editar</a></li>
-                  <li><a href="/deletar">Deletar</a></li>
-                
-          </ul>
-          </nav>
-    </header>
+   <header>
+    
+    <!-- <a id="logo" href="/">  <img src="transparent-shipping-box-box-package-delivery-5dbb68d1a10c23.8583468215725631536597.png" alt="" width="40px" height="40px"></a> -->
+       <div class="div-menu">
+        
+        <ul class="menu">
+            <li><a href="/">home</a></li>
+            <li><a href="/estoque">estoque</a></li>
+            <li><a href="/cadastrar">Cadastrar</a></li>
+            <li><a href="/editar">editar</a></li>
+            <li><a href="/deletar">deletar</a></li>
+        </ul>
 
-        <div id="divForm">
-            <h1 id="txt">Deletar pd</h1>
-            <form action="/deletar" method="post">
-                <input type="number" placeholder="Digite o id do produto" name="id">
-               
-                <button type="submit">Deletar</button>
-                
-            </form>
-        </div>
+       </div>
 
     
+   </header>
+        
+            
+    <div class="container">
+        <div class="propaganda">
+            <h1>Stock center</h1>
+        </div>
+        <div class="box">
+            <div class="itens-deletar">
+                <div>
+                <form action="/deletar" method="post">
+                   <fieldset>
+                    <!-- <legend>cadastrar</legend> -->
+
+            <label for="id">id</label>
+            <input type="number" placeholder="Digite o id do produto" name="id" id="imp">
+            
+                    <button type="submit">Atualizar</button>
+                   </fieldset>
+                    
+                </form>
+
+           
+
+        </div>
+      
+         
+      
+        
+      
+                
+            </div>
+        </div>
 
     </div>
+    <div class="container-2">
+        <div class="txt"><h1>Serviços</h1></div>
+        <div class="grid">
+            <div class="grid-itens">
+                <h1>estoque</h1>
+            </div>
+            <div class="grid-itens">
+                <h1>organização</h1>
+            </div>
+            <div class="grid-itens">
+                <h1>parcerias</h1>
+            </div>
+        </div>
+    </div>
+
+    <footer></footer>
 </body>
 </html>

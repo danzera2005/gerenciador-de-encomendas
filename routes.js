@@ -12,9 +12,8 @@ const routeDelete = require('./src/controlls/deletcontrolls')
 
 
 
-//rotas home
-route.get('/home',RouteHome.inicio)
-
+//rotas estoque
+route.get('/estoque',RouteHome.inicio)
 
 //rotas cadastrar
 route.get('/cadastrar',routeCadastrar.homeCadastrar)

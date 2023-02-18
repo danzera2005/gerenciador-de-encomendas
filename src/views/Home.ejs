@@ -5,41 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     
-
     <header>
-        <a id="logo" href="/">  <img src="transparent-shipping-box-box-package-delivery-5dbb68d1a10c23.8583468215725631536597.png" alt="" width="40px" height="40px"></a>
-        <a id="titulo">DN </a>
     
-        <div id="mn">
-           
+        <!-- <a id="logo" href="/">  <img src="transparent-shipping-box-box-package-delivery-5dbb68d1a10c23.8583468215725631536597.png" alt="" width="40px" height="40px"></a> -->
+           <div class="div-menu">
             
-                <ul class="menu">
-                      <li><a href="/">Home</a></li>
-                      <li><a href="/cadastrar">Cadastrar encomenda</a></li>
-                      <li><a href="/editar">Editar</a></li>
-                      <li><a href="/deletar">Deletar</a></li>
-                    
-              </ul>
-              
-        </div>
-    </header>
+            <ul class="menu">
+                <li><a href="/">home</a></li>
+                <li><a href="/estoque">estoque</a></li>
+                <li><a href="/cadastrar">Cadastrar</a></li>
+                <li><a href="/editar">editar</a></li>
+                <li><a href="/deletar">deletar</a></li>
+            </ul>
+    
+           </div>
+    
+        
+       </header>
 
     <div id="divContainer">
-        <% for(var i = 0; lista.length>i;i++){ %>
-            <div class="itens">
-                <img src="transparent-shipping-box-box-package-delivery-5dbb68d1a10c23.8583468215725631536597.png" alt="" width="200px" height="160px"> 
-                <h1><%= lista[i].nome_produto%></h1>
-                <div id="bt"><a id="t" href="#">clique para enviar</a></div>
-            </div>
-     <% } %>  
+        <div class="container-encomendas">
+
+            <% for(var i = 0; lista.length>i;i++){ %>
+                <div class="encomendas">
+                    <img src="transparent-shipping-box-box-package-delivery-5dbb68d1a10c23.8583468215725631536597.png" alt="" width="200px" height="160px"> 
+                    <h1><%= lista[i].nome_produto%></h1>
+                    <div id="bt"><a id="t" href="#">clique para enviar</a></div>
+                </div>
+         <% } %> 
+        </div>
+        
 
         </div>
-       
-
-    </div>
 </body>
 </html>
+

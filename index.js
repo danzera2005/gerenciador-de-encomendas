@@ -16,9 +16,32 @@ app.use(routes)
 app.set('views', path.resolve(__dirname, 'src' , 'views'))
 app.set('view engine', 'ejs')
 
+
+
 app.get('/',(req,res)=>{
-    res.sendFile(__dirname + "/index.html")
+    res.sendFile(__dirname + "/index2.html")
 })
+
+app.post('/',(req,res)=>{
+    
+    const mysql = "INSERT INTO usuarios(nome_usuario,senha_usuario) VALUES(?)"
+
+    const values =[
+        req.body.nome,
+        
+        
+        req.body.senha,
+    ];
+
+    conn.query(mysql,[values],(err) =>{
+
+        if(err) throw err;
+        console.log("usuario cadastrado")
+        res.redirect("back")
+    })
+    
+
+ })
 
 conn.connect(err=>{
 
