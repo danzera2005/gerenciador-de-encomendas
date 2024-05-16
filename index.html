@@ -2,94 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./styles.css">
-    <script src="./index.js" defer></script>
 </head>
 <body>
-
-   <header>
-    <div class="log">
-        <a id="logo" href="/">  <img src="transparent-shipping-box-box-package-delivery-5dbb68d1a10c23.8583468215725631536597.png" alt="" width="40px" height="40px"></a> 
-    </div>
-     
-       <div class="div-menu">
-        
-        <ul class="menu">
-            <li><a href="/">home</a></li>
-            <li><a href="/estoque">estoque</a></li>
-            <li><a href="/cadastrar">Cadastrar</a></li>
-            <li><a href="/editar">editar</a></li>
-            <li><a href="/deletar">deletar</a></li>
-        </ul>
-
-       </div>
-
-    
-   </header>
-        
-            
-    <div class="container">
-        <div class="propaganda">
-            <h1>gerencie seu estoque gratuitamente</h1>
-            
+    <header>
+        <img src="verificar.png" alt="" width="40px" height="40px">
+        <h3>task Manager</h3>
+        <div id="div-menu">
+            <ul id="menu">
+                <li class="menu-li">Home</li>
+                <li class="menu-li" >
+                    <a href="#content">about</a>
+                </li>
+                <li id="start-use">
+                    <a href="/home">Start using</a>
+                </li>
+            </ul>
         </div>
-        <div class="box">
-            <div class="itens">
-                <div>
-                <form action="" method="post">
-                   <fieldset>
-                    <!-- <legend>cadastrar</legend> -->
-                    <label for="nome">nome</label>
-                    <input type="text" id="nome" placeholder="digite seu nome completo" name="nome" required><br>
-
-                    <label for="cep">cep</label>
-                    <input type="text" id="cep" placeholder="digite seu cpf" name="cpf" required><br>
-
-                    <label for="tell">telefone</label>
-                    <input type="tel" id="tell" placeholder="digite seu telefone" name="tell" required><br>
-
-                    <label for="senha">senha</label>
-                    <input type="text" id="senha" placeholder="crie sua senha" name="senha" required><br>
-
-                    
-
-                    <button type="submit">criar minha conta</button>
-                    
-                   </fieldset>
-                   <div class="ctt">
-                    <a href="">ja tenho cadastro</a>
-                   </div>
-                    
-                </form>
-                
-            </div>
-        </div>
-
+    </header>
+    <section id="presentation">
+        <h1 id="presentation-title">Manage tasks with just one click</h1>
+        <a id="button-go"href="/home">
+            Start using</a>
+        <img src="./aluna.png" width="200px" height="200px" id="caderno">
+        <img src="./marcador.png" width="200px" height="200px" id="marker">
+    </section>
+    <hr>
+    <div id="infos">
+        <aside>
+            <h1>How Task Management Works ?</h1>
+            <p>Task management is the process of managing an individual task from conception to closure. A task does not necessarily
+                 need to have a goal or even specific deadlines. 
+                 A group of tasks together contributes to the execution of a project.</p>
+        </aside>
+        <article id="content">
+            <img src="tasks.png" alt="" width="500px" height="300px">
+        </article>
     </div>
-    <div class="container-2">
-        <div class="txt"><h1>Serviços</h1></div>
-        <div class="grid">
-            <div class="grid-itens">
-                <h1>estoque</h1>
-            </div>
-            <div class="grid-itens">
-                <h1>organização</h1>
-            </div>
-            <div class="grid-itens">
-                <h1>sobre-nós</h1>
-            </div>
-            <div class="grid-itens">
-                <h1>intuito</h1>
-            </div>
-            <div class="grid-itens">
-                <h1>gerentes</h1>
-            </div>
+    <footer>
+        <div id="container-social-media">
+            <img src="instagram.png" alt="" width="30px" height="30px">
+            <img src="twitter.png" alt="" width="30px" height="30px">
+            <img src="whatsapp.png" alt="" width="30px" height="30px">
         </div>
-    </div>
-
-    <footer></footer>
+    </footer>
 </body>
 </html>

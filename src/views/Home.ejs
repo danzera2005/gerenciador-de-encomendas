@@ -6,40 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
-    
-    <header>
-    
-        <!-- <a id="logo" href="/">  <img src="transparent-shipping-box-box-package-delivery-5dbb68d1a10c23.8583468215725631536597.png" alt="" width="40px" height="40px"></a> -->
-           <div class="div-menu">
-            
-            <ul class="menu">
-                <li><a href="/">home</a></li>
-                <li><a href="/estoque">estoque</a></li>
-                <li><a href="/cadastrar">Cadastrar</a></li>
-                <li><a href="/editar">editar</a></li>
-                <li><a href="/deletar">deletar</a></li>
-            </ul>
-    
-           </div>
-    
-        
-       </header>
 
+    <header onclick="home()">
+        <img src="verificar.png" alt="" width="40px" height="40px">
+        <h3>task Manager</h3>
+    </header>
     <div id="divContainer">
+        <div id="div-acoes">
+            <form action="/cadastrar" method="post" id="form-cad">
+                <div id="inputs-create-task">
+                    <input type="text" placeholder="Digite o nome para uma nova tarefa" id="new-task" name="create_name_task" required>
+                    <input type="date" placeholder="Digite o nome para uma nova tarefa" id="date-task" name="date_task_cad" required>
+                </div>
+                <div id="btn-op">
+                    <button id="criar">Create Task</button>
+                </div>
+            </form>
+            <button id="deletar-tudo" onclick="openModal('modal')">Delete All</button>
+        </div>
         <div class="container-encomendas">
 
-            <% for(var i = 0; lista.length>i;i++){ %>
-                <div class="encomendas">
-                    <img src="transparent-shipping-box-box-package-delivery-5dbb68d1a10c23.8583468215725631536597.png" alt="" width="200px" height="160px"> 
-                    <h1><%= lista[i].nome_produto%></h1>
-                    <div id="bt"><a id="t" href="#">clique para enviar</a></div>
-                </div>
-         <% } %> 
+        <div class="modal">
+            <h1>Você realmente deseja deletar<br/> todas as tarefas?</h1>
+            <button id="cancelar-delete" onclick="closeModal('modal')">Cancelar</button>
+            <button id="confirm-delete" onclick="closeModal('modal')">Deletar</button>
         </div>
-        
 
+        <div class="modal-editar" id="mdl-edit">            
+                <h1>Atualize os dados da tarefa</h1>
+                <input type="text" placeholder="atualize o nome da tarefa" name="name_task">
+                <input type="Date" placeholder="atualize o nome da tarefa" name="date_task">
+                <button type="submit" id="editar-confirm"  onclick="editar()">Editar</button>
+                <button id="cancelar-editar" onclick="closeModal('modal-editar')">Cancelar</button>
+        </div>
+    
+        <% if (lista.length != 0) { %>
+            <% for(var i = 0; lista.length>i;i++){ %>
+                <div class="encomendas">             
+                    <div>
+                        <h1><%= lista[i].name_task%></h1>
+                        <h3 id="horario">tarefa criada em : <%= lista[i].date_task_create%> </h3>
+                    </div>       
+                    <div id="button-container">
+                    <button id="deletar" value="<%= lista[i].id%>" onclick="confirmDelete()">
+                        <img src="excluir.png" alt="" width="40px" height="40px">                                        
+                    </button>
+                    <button type="submit" id="editar" onclick="openModal('modal-editar', '<%= lista[i].id%>')" data-toggle="modal-editar" data-target="#mdl-edit">
+                        <img src="editar.png" alt="" width="40px" height="40px">                                        
+                    </button>
+                    <button id="concluir" value="<%= lista[i].id%>">
+                        <img src="aceitar.png" alt="" width="40px" height="40px">                                        
+                    </button>
+                    </div>
+                </div>
+         <% } %>
+            <%} else { %>
+            <h1 id="no-tasks">You don't have tasks registered yet</h1>
+            <% } %>
+        </div>
         </div>
 </body>
 </html>
